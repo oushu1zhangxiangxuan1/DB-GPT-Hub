@@ -1,0 +1,24 @@
+[2024-01-19 17:25:30,022] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /root/space/conda_envs/test_hub/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda116_nocublaslt.so
+CUDA SETUP: CUDA runtime path found: /root/space/conda_envs/test_hub/lib/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+CUDA SETUP: Detected CUDA version 116
+CUDA SETUP: Loading binary /root/space/conda_envs/test_hub/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda116_nocublaslt.so...
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  748.38GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    5.86GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=1
+  748.38GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=0

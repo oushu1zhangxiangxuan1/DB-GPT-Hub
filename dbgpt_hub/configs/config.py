@@ -50,23 +50,12 @@ SQL_DATA_INFO = [
         "data_source": "spider",
         "train_file": ["train_spider.json", "train_others.json"],
         "dev_file": ["dev.json"],
-        "train_tables_file": "tables.json",
-        "dev_tables_file": "tables.json",
+        "tables_file": "tables.json",
         "db_id_name": "db_id",
-        "output_name": "query",
         "is_multiple_turn": False,
+        "dialect":"sqlite",
     }
-    # {
-    #     "data_source": "bird",
-    #     "train_file": ["train/train.json"],
-    #     "dev_file": ["dev/dev.json"],
-    #     "train_tables_file": "train/train_tables.json",
-    #     "dev_tables_file": "dev/dev_tables.json",
-    #     "db_id_name": "db_id",
-    #     "output_name": "SQL",
-    #     "is_multiple_turn": False,
-    # }
-    # ,
+    ,
     # {
     #     "data_source": "chase",
     #     "train_file": ["Chase/chase_train.json"],
@@ -77,7 +66,39 @@ SQL_DATA_INFO = [
     # }
     # ,
     # {
-    #     "data_source": "cosql_dataset",
+    #     "data_source": "oushu0322",
+    #     "train_file": ["all.json", "dev.json"],
+    #     "dev_file": ["all.json"],
+    #     "meta_file": "meta.json",
+    #     "tables_file": "table.json",
+    #     "db_id_name": "database_id",
+    #     "is_multiple_turn": True,
+        # "dialect":"postgresql",
+    # }
+    # ,
+    {
+        "data_source": "oushu0326",
+        "train_file": ["train.json"],
+        "dev_file": ["dev.json"],
+        "meta_file": "meta.json",
+        "tables_file": "table.json",
+        "db_id_name": "database_id",
+        "is_multiple_turn": True,
+        "dialect":"postgresql",
+    }
+    ,
+    {
+        "data_source": "chase",
+        "train_file": ["Chase/chase_train.json"],
+        "dev_file": ["Chase/chase_dev.json"],
+        "tables_file": "Chase/chase_tables.json",
+        "db_id_name": "database_id",
+        "is_multiple_turn": True,
+        "dialect":"sqlite",
+    }
+    # ,
+    # {
+    #     "data_source": "cosql",
     #     "train_file": ["sql_state_tracking/cosql_train.json"],
     #     "dev_file": ["sql_state_tracking/cosql_dev.json"],
     #     "tables_file": "tables.json",
@@ -86,47 +107,119 @@ SQL_DATA_INFO = [
     # }
     # ,
     # {
-    # {
     #     "data_source": "sparc",
     #     "train_file": ["train.json"],
-    #     "train_tables_file": "tables.json",
-    #     "dev_tables_file": "tables.json",
     #     "dev_file": ["dev.json"],
+    #     "tables_file": "tables.json",
     #     "db_id_name": "database_id",
     #     "is_multiple_turn": True,
-    #     "output_name": "query",
     # }
 ]
-INSTRUCTION_PROMPT = """\
-I want you to act as a SQL terminal in front of an example database, \
-you need only to return the sql command to me.Below is an instruction that describes a task, \
-Write a response that appropriately completes the request.\n"
-##Instruction:\n{}\n"""
-INPUT_PROMPT = "###Input:\n{}\n\n###Response:"
 
-INSTRUCTION_ONE_SHOT_PROMPT = """\
-I want you to act as a SQL terminal in front of an example database. \
-You need only to return the sql command to me. \
-First, I will show you few examples of an instruction followed by the correct SQL response. \
-Then, I will give you a new instruction, and you should write the SQL response that appropriately completes the request.\
-\n### Example1 Instruction:
-The database contains tables such as employee, salary, and position. \
-Table employee has columns such as employee_id, name, age, and position_id. employee_id is the primary key. \
-Table salary has columns such as employee_id, amount, and date. employee_id is the primary key. \
-Table position has columns such as position_id, title, and department. position_id is the primary key. \
-The employee_id of salary is the foreign key of employee_id of employee. \
-The position_id of employee is the foreign key of position_id of position.\
-\n### Example1 Input:\nList the names and ages of employees in the 'Engineering' department.\n\
-\n### Example1 Response:\nSELECT employee.name, employee.age FROM employee JOIN position ON employee.position_id = position.position_id WHERE position.department = 'Engineering';\
-\n###New Instruction:\n{}\n"""
+SHUFFLE=True
+FIRST_INSTRUCTION_ONLY = True
+FULL_ROUND=False
+METADATA_USE_SQL = True
+WITH_BACKTICKS = True
+FULL_HISTORY = False  # each turn will has a full history When set to True.(only works on multiturn datasets)
+USE_DIALECT = True
 
-# EXAMPLES =[EXAMPLE1, EXAMPLE1]
+# PROMPT_NAME = "MetadataPrompt_1"
+# PROMPT_NAME = "DBTHub_Prompt_CH"
 
-# EXAMPLE1 = "\n### Example1 Input:\nList the names and ages of employees in the 'Engineering' department.\n\
-# \n### Example1 Response:\nSELECT employee.name, employee.age FROM employee JOIN position ON employee.position_id = position.position_id WHERE position.department = 'Engineering';\
-# \n###New Instruction:\n{}\n"
 
-### test--------------------
+# INSTRUCTION_PROMPT = """
+# ```sql\n{}\n```\n根据上面的几个表结构，在后续的对话中将自然语言查询转换为SQL语句，仅以markdown形式输出SQL，不要生成其他无关内容，且确保SQL是完整且正确的
+# """
+# INPUT_PROMPT = "结合上下文，将下面自然语言查询转换为完整的SQL语句，仅以markdown形式输出SQL，不要生成其他无关内容，且确保SQL是完整且正确的:\n{}"
+
+# INSTRUCTION_PROMPT = """
+# 根据下面的几个表结构，在后续的对话中将自然语言查询转换为SQL语句，仅以markdown形式输出SQL，不要生成其他无关内容，且确保SQL是完整且正确的\n
+# ### Instruction:```sql\n{}\n```\n
+# """
+# INPUT_PROMPT = "###Input:\n{}\n###Response:"
+
+#########################################################
+# PROMPT_NAME = "DBTHub_Prompt"
+# INSTRUCTION_PROMPT = """\
+# I want you to act as a SQL terminal in front of an example database, \
+# you need only to return the sql command to me.Below is an instruction that describes a task, \
+# Write a response that appropriately completes the request.\n"
+# ##Instruction:\n{}\n"""
+# INPUT_PROMPT = "###Input:\n{}\n\n###Response:"
+
+##################################################
+# PROMPT_NAME = "OushuDBT_Prompt_0322"
+# INSTRUCTION_PROMPT = """
+# Given an input question, create a syntactically correct postgresql sql.
+
+# Only use the following tables schema to generate sql:
+# {}
+
+
+# Do not query for tables and columns that do not exist. Also, pay attention to which column is in which table.
+# """
+
+# INPUT_PROMPT = """
+# Question:
+# {}
+
+
+# Think step by step.
+
+# Please respond in Chinese and without any explanation.
+
+# And SQL statements should be formatted using Markdown syntax start with ```sql
+# """
+#################################################
+##################################################
+PROMPT_NAME = "OushuDBT_Prompt_0322"
+INSTRUCTION_PROMPT = """
+Given an input question, create a syntactically correct {} sql.
+
+Only use the following tables schema to generate sql:
+{}
+
+
+Do not query for tables and columns that do not exist. Also, pay attention to which column is in which table.
+"""
+
+INPUT_PROMPT = """
+Question:
+{}
+
+
+Think step by step.
+
+Please respond in Chinese and without any explanation.
+
+And SQL statements should be formatted using Markdown syntax start with ```sql
+"""
+#################################################
+# PROMPT_NAME = "NULL_Prompt_Inst"
+
+# INSTRUCTION_PROMPT = """##Instruction:\n{}"""
+
+# INPUT_PROMPT = "###Input:\n{}\n\n###Response:"
+
+
+# PROMPT_NAME = "DBT_Prompt"
+
+# INSTRUCTION_PROMPT = """You are an assistant that answers user specialized database questions.
+# Given an input question, create a syntactically correct sqlite sql.
+
+# Only use the following tables schema to generate sql:
+# {}
+# """
+
+# INPUT_PROMPT = """
+# Question:
+# {}
+
+# Think step by step.
+# Please respond in Chinese and without any explanation.
+# And SQL statements should be formatted using Markdown syntax start with ```sql
+# """
 
 
 # METHODS = ["full", "freeze", "lora"]
@@ -179,8 +272,6 @@ The position_id of employee is the foreign key of position_id of position.\
 #     "Qwen-7B-Chat": "Qwen/Qwen-7B-Chat",
 #     "XVERSE-13B": "xverse/XVERSE-13B",
 #     "ChatGLM2-6B-Chat": "THUDM/chatglm2-6b",
-#     "ChatGLM3-6B-Base": "THUDM/chatglm3-6b-base",
-#     "ChatGLM3-6B-Chat": "THUDM/chatglm3-6b"
 # }
 
 # DEFAULT_MODULE = {
@@ -196,8 +287,6 @@ The position_id of employee is the foreign key of position_id of position.\
 #     "Qwen": "c_attn",
 #     "XVERSE": "q_proj,v_proj",
 #     "ChatGLM2": "query_key_value",
-#     "ChatGLM3": "query_key_value",
-
 # }
 
 # DEFAULT_TEMPLATE = {
@@ -208,6 +297,4 @@ The position_id of employee is the foreign key of position_id of position.\
 #     "InternLM": "intern",
 #     "Qwen": "chatml",
 #     "ChatGLM2": "chatglm2",
-#     "ChatGLM3": "chatglm3",
-
 # }

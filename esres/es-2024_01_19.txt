@@ -1,0 +1,7 @@
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  748.38GB | 249.46GB | offload_optimizer=none
+结果已写入文件: ./esres/es-2024_01_19.txt

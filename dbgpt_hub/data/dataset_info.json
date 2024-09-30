@@ -1,29 +1,251 @@
 {
-  "example_text2sql_train": {
-    "file_name": "example_text2sql_train.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "history": "history"
-    }
-  },
-  "example_text2sql_train_one_shot": {
-    "file_name": "example_text2sql_train_one_shot.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "history": "history"
-    }
-  },
-  "example_rm_train": {
-    "file_name": "oaast_rm_zh.json",
-    "columns": {
-      "prompt": "instruction",
-      "query": "input",
-      "response": "output",
-      "history": "history"
-    }
+    "example_text2sql": {
+      "file_name": "example_text2sql.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "MetadataPrompt_1-Chase-WB-UseSQL-FIO": {
+      "file_name": "MetadataPrompt_1-Chase-WB-UseSQL-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "MetadataPrompt_1-Chase-WB-UseSQL": {
+      "file_name": "MetadataPrompt_1-Chase-WB-UseSQL_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-chase-WB-FIO": {
+      "file_name": "DBTHub_Prompt-chase-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-spider-WB-FIO": {
+      "file_name": "DBTHub_Prompt-spider-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-spider-WB-FIO-UseSQL": {
+      "file_name": "DBTHub_Prompt-spider-WB-FIO-UseSQL_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-spider_chase_chase_cosql_sparc-WB-UseSQL-FIO": {
+      "file_name": "DBTHub_Prompt-spider_chase_chase_cosql_sparc-WB-UseSQL-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-spider_chase_chase_cosql_sparc-WB-FIO": {
+      "file_name": "DBTHub_Prompt-spider_chase_chase_cosql_sparc-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "MetadataPrompt_1-spider_chase_chase_cosql_sparc-WB-FIO": {
+      "file_name": "MetadataPrompt_1-spider_chase_chase_cosql_sparc-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-spider_chase_chase_cosql_sparc-FIO-UseSQL": {
+      "file_name": "DBTHub_Prompt-spider_chase_chase_cosql_sparc-FIO-UseSQL_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt_CH-spider_chase_chase_cosql_sparc-WB-FIO": {
+      "file_name": "DBTHub_Prompt_CH-spider_chase_chase_cosql_sparc-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "MetadataPrompt_1-spider-WB-FIO-UseSQL": {
+      "file_name": "MetadataPrompt_1-spider-WB-FIO-UseSQL_train.json",
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "MetadataPrompt_1-spider_chase_chase_cosql_sparc-WB-FIO-UseSQL": {
+      "file_name": "MetadataPrompt_1-spider_chase_chase_cosql_sparc-WB-FIO-UseSQL_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "NULL_Prompt_Inst-chase-WB-FIO-UseSQL": {
+      "file_name": "NULL_Prompt_Inst-chase-WB-FIO-UseSQL_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "NULL_Prompt_Inst-chase-WB-FIO": {
+      "file_name": "NULL_Prompt_Inst-chase-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBT_Prompt-chase-WB-FIO": {
+      "file_name": "DBT_Prompt-chase-WB-FIO_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBT_Prompt-chase-WB-FIO_dir": {
+      "file_name": "./DBT_Prompt-chase-WB-FIO/train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-chase-WB-FIO-SF": {
+      "file_name": "DBTHub_Prompt-chase-WB-FIO-SF_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "DBTHub_Prompt-chase-WB-FIO-SF-FR": {
+      "file_name": "DBTHub_Prompt-chase-WB-FIO-SF-FR_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-oushu0322-WB-FIO-UseSQL-FR": {
+      "file_name": "OushuDBT_Prompt_0322-oushu0322-WB-FIO-UseSQL-FR_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-chase_oushu0322-WB-FIO-UseSQL-SF-FR": {
+      "file_name": "OushuDBT_Prompt_0322-chase_oushu0322-WB-FIO-UseSQL-SF-FR_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-oushu0326-WB-FIO-UseSQL-SF-FR": {
+      "file_name": "OushuDBT_Prompt_0322-oushu0326-WB-FIO-UseSQL-SF-FR_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-oushu0326_chase-WB-FIO-UseSQL-SF-FR": {
+      "file_name": "OushuDBT_Prompt_0322-oushu0326_chase-WB-FIO-UseSQL-SF-FR_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-oushu0326_chase-WB-FIO-UseSQL-SF": {
+      "file_name": "OushuDBT_Prompt_0322-oushu0326_chase-WB-FIO-UseSQL-SF_train.json",
+      "repeat":1,
+      "columns": {
+        "prompt": "instruction",
+        "query": "input",
+        "response": "output",
+        "history": "history"
+      }
+    },
+    "OushuDBT_Prompt_0322-spider_oushu0326_chase-WB-FIO-UseSQL-SF": {
+        "file_name": "OushuDBT_Prompt_0322-spider_oushu0326_chase-WB-FIO-UseSQL-SF_train.json",
+        "repeat":1,
+        "columns": {
+          "prompt": "instruction",
+          "query": "input",
+          "response": "output",
+          "history": "history"
+        }
+      }
   }
-}

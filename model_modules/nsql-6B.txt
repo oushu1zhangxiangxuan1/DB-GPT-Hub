@@ -1,0 +1,507 @@
+模型路径: /root/space/models/NumbersStation/nsql-6B
+所有modules:
+CodeGenModel(
+  (wte): Embedding(51200, 4096)
+  (drop): Dropout(p=0.0, inplace=False)
+  (h): ModuleList(
+    (0): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (12): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (13): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (14): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (15): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (16): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (17): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (18): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (19): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (20): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (21): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (22): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (23): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (24): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (25): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (26): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (27): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (28): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (29): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (30): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (31): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (32): CodeGenBlock(
+      (ln_1): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+      (attn): CodeGenAttention(
+        (attn_dropout): Dropout(p=0.0, inplace=False)
+        (resid_dropout): Dropout(p=0.0, inplace=False)
+        (qkv_proj): Linear(in_features=4096, out_features=12288, bias=False)
+        (out_proj): Linear(in_features=4096, out_features=4096, bias=False)
+      )
+      (mlp): CodeGenMLP(
+        (fc_in): Linear(in_features=4096, out_features=16384, bias=True)
+        (fc_out): Linear(in_features=16384, out_features=4096, bias=True)
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((4096,), eps=1e-05, elementwise_affine=True)
+)
+
+可以进行LoRA微调的modules:
+[]

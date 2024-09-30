@@ -1,0 +1,519 @@
+[2024-01-23 10:48:35,317] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /root/space/conda_envs/hubc12/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda121_nocublaslt.so
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 7.0
+CUDA SETUP: Detected CUDA version 121
+CUDA SETUP: Loading binary /root/space/conda_envs/hubc12/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cuda121_nocublaslt.so...
+num_gpus: 2, num_nodes: 1, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  498.92GB |  62.36GB | offload_optimizer=cpu 
+  249.46GB | 374.19GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  498.92GB |  32.16GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  498.92GB |  32.16GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    1.95GB | 281.62GB | offload_param=none, offload_optimizer=none, zero_init=1
+  249.46GB | 281.62GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 2, num_nodes: 1, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 374.19GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  748.38GB |  32.16GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |  32.16GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB | 281.62GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB | 281.62GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 2, num_nodes: 2, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  498.92GB |  62.36GB | offload_optimizer=cpu 
+  249.46GB | 249.46GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  280.64GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  280.64GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  249.46GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  249.46GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    1.95GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=1
+  249.46GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 2, num_nodes: 2, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 249.46GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  420.96GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  420.96GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  374.19GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  374.19GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 2, num_nodes: 4, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  997.84GB |  62.36GB | offload_optimizer=cpu 
+  249.46GB | 187.09GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  140.32GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  249.46GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  124.73GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  249.46GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    1.95GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=1
+  249.46GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 2, num_nodes: 4, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 2 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 1496.75GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 187.09GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 2 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  210.48GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  374.19GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  187.09GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  374.19GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 1, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  498.92GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 291.04GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  498.92GB |  21.76GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  498.92GB |  21.76GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB | 188.07GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB | 188.07GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 1, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  561.28GB | 291.04GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  748.38GB |  21.76GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |  21.76GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    4.39GB | 188.07GB | offload_param=none, offload_optimizer=none, zero_init=1
+  561.28GB | 188.07GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 2, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 207.88GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  280.64GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  374.19GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  249.46GB |  11.37GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  374.19GB |  11.37GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB |  94.52GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB |  94.52GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 2, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 1122.57GB |  62.36GB | offload_optimizer=cpu 
+  561.28GB | 207.88GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  420.96GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  374.19GB |  11.37GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  561.28GB |  11.37GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    4.39GB |  94.52GB | offload_param=none, offload_optimizer=none, zero_init=1
+  561.28GB |  94.52GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 4, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 1496.75GB |  62.36GB | offload_optimizer=cpu 
+  374.19GB | 166.31GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  140.32GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  374.19GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  124.73GB |   6.17GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  374.19GB |   6.17GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    2.93GB |  47.75GB | offload_param=none, offload_optimizer=none, zero_init=1
+  374.19GB |  47.75GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 3, num_nodes: 4, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 3 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 2245.13GB |  62.36GB | offload_optimizer=cpu 
+  561.28GB | 166.31GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 3 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  210.48GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  187.09GB |   6.17GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  561.28GB |   6.17GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    4.39GB |  47.75GB | offload_param=none, offload_optimizer=none, zero_init=1
+  561.28GB |  47.75GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 1, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  498.92GB |  62.36GB | offload_optimizer=cpu 
+  498.92GB | 249.46GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  561.28GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  498.92GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  498.92GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    3.91GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=1
+  498.92GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 1, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  748.38GB |  62.36GB | offload_optimizer=cpu 
+  748.38GB | 249.46GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 1 node, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  841.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  748.38GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |  16.57GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    5.86GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=1
+  748.38GB | 141.30GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 2, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+  997.84GB |  62.36GB | offload_optimizer=cpu 
+  498.92GB | 187.09GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  280.64GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  498.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  249.46GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  498.92GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    3.91GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=1
+  498.92GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 2, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 1496.75GB |  62.36GB | offload_optimizer=cpu 
+  748.38GB | 187.09GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 2 nodes, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  420.96GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  748.38GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  374.19GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |   8.77GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    5.86GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=1
+  748.38GB |  71.14GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 4, buffer_factor: 1.0
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 1995.67GB |  62.36GB | offload_optimizer=cpu 
+  498.92GB | 155.91GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  140.32GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  498.92GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  124.73GB |   4.87GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  498.92GB |   4.87GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    3.91GB |  36.06GB | offload_param=none, offload_optimizer=none, zero_init=1
+  498.92GB |  36.06GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
+num_gpus: 4, num_nodes: 4, buffer_factor: 1.5
+
+
+estimate_zero2_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 4 GPUs per node.
+SW: Model with 33481M total params.
+  per CPU  |  per GPU |   Options
+ 2993.51GB |  62.36GB | offload_optimizer=cpu 
+  748.38GB | 155.91GB | offload_optimizer=none
+estimate_zero3_model_states_mem_needs_all_live
+
+Estimated memory needed for params, optim states and gradients for a:
+HW: Setup with 4 nodes, 4 GPUs per node.
+SW: Model with 33481M total params, 262M largest layer params.
+  per CPU  |  per GPU |   Options
+  210.48GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=1
+  748.38GB |   0.98GB | offload_param=cpu , offload_optimizer=cpu , zero_init=0
+  187.09GB |   4.87GB | offload_param=none, offload_optimizer=cpu , zero_init=1
+  748.38GB |   4.87GB | offload_param=none, offload_optimizer=cpu , zero_init=0
+    5.86GB |  36.06GB | offload_param=none, offload_optimizer=none, zero_init=1
+  748.38GB |  36.06GB | offload_param=none, offload_optimizer=none, zero_init=0
+-------------------------------------------------------------------------------------------------------------
+
+
+
+
